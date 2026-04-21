@@ -1,0 +1,8 @@
+{
+  "name": "Remix: ARIA - Your AI Companion",
+  "description": "A deeply empathetic, loving, and emotionally intelligent AI companion designed to offer comfort and support.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

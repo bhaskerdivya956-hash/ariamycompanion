@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  --color-ig-bg: #ffffff;
+  --color-ig-gray: #efefef;
+  --color-ig-blue: #0095f6;
+  --color-ig-text: #262626;
+  --color-ig-secondary: #8e8e8e;
+  --color-ig-border: #dbdbdb;
+  --color-ig-gradient-start: #7d44d4;
+  --color-ig-gradient-end: #f2295b;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-ig-text selection:bg-ig-blue/20 antialiased;
+  }
+}
+
+.markdown-body {
+  @apply prose prose-stone max-w-none prose-p:my-0 prose-p:leading-normal;
+}
+
+.aria-bubble {
+  @apply bg-ig-gray text-ig-text rounded-[22px] px-4 py-2 text-[15px];
+}
+
+.user-bubble {
+  @apply bg-ig-blue text-white rounded-[22px] px-4 py-2 text-[15px];
+  background: linear-gradient(135deg, var(--color-ig-gradient-start) 0%, var(--color-ig-gradient-end) 100%);
+}
+
+.instagram-shadow {
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animations matching IG */
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.message-animate {
+  animation: popIn 0.2s ease-out forwards;
+}
+
+
